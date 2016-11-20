@@ -1,5 +1,18 @@
 <html>
 <head>
+<script src="//storage.googleapis.com/vrview/2.0/vrview.min.js"></script>
+<script>
+window.addEventListener('load', onVrViewLoad)
+function onVrViewLoad() {
+  var vrView = new VRView.Player('#vrview', {
+    image: 'https://yuttahub.github.io/images/IMG_5183_panorama.JPG',
+    is_stereo: false,
+    width:"100%",
+    height"600px",
+    default_yaw:30
+  });
+}
+</script>
 </head>
 <body>
 <h1>
@@ -8,5 +21,7 @@
 <div>
 <iframe allowfullscreen="" frameborder="0" height="600px" src="//storage.googleapis.com/vrview/index.html?image=https://yuttahub.github.io/images/IMG_5183_panorama.JPG" width="100%" default_yaw="30"></iframe>
 </div>
+<br/>
+<div id="vrview"></div>
 </body>
 </html>
